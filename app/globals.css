@@ -24,3 +24,141 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+@keyframes scrollCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.scroll-card {
+  opacity: 1;
+}
+
+@supports (animation-timeline: view()) {
+  .scroll-card {
+    animation: scrollCardReveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-card {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes charityReveal {
+  from {
+    opacity: 0;
+    transform: translateY(48px) scale(0.97);
+    filter: blur(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes charityFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes charityGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 28px rgba(255, 255, 255, 0.25);
+  }
+}
+
+@keyframes charityShine {
+  from {
+    transform: translateX(-120%) rotate(12deg);
+  }
+
+  to {
+    transform: translateX(160%) rotate(12deg);
+  }
+}
+
+.charity-reveal {
+  opacity: 1;
+}
+
+@supports (animation-timeline: view()) {
+  .charity-reveal {
+    animation: charityReveal ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+  }
+}
+
+.charity-float {
+  animation: charityFloat 5s ease-in-out infinite;
+}
+
+.charity-glow {
+  animation: charityGlow 3.2s ease-in-out infinite;
+}
+
+.charity-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.charity-shine::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: 0;
+  z-index: 20;
+  height: 180%;
+  width: 80px;
+  transform: translateX(-140%) rotate(12deg);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+  pointer-events: none;
+}
+
+.charity-shine:hover::before {
+  animation: charityShine 0.9s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .charity-reveal,
+  .charity-float,
+  .charity-glow,
+  .charity-shine:hover::before {
+    animation: none;
+  }
+
+  .charity-reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
