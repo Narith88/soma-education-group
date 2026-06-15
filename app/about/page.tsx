@@ -399,12 +399,6 @@ export default function AboutPage() {
               <h3 className="mt-2 text-2xl font-black text-slate-950">
                 Built by students, for students
               </h3>
-
-              <p className="mt-3 leading-7 text-slate-600">
-                Use a founder photo, online meeting screenshot, project
-                workspace image, or event preparation photo here while SOMA is
-                still working remotely.
-              </p>
             </div>
           </div>
         </div>
