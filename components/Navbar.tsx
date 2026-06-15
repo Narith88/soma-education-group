@@ -1,4 +1,4 @@
-const telegramLink = "https://t.me/NewtonLearningCenter";
+const telegramLink = "https://t.me/somaeducationgroup";
 
 export default function Navbar() {
   return (

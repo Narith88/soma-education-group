@@ -22,6 +22,29 @@ const sections = [
     description:
       "Explore CMPO, Mathematics Genius Olympiad, and E-Solver Cambodia.",
   },
+  
+  
+  {
+    title: "Achievements",
+    href: "/achievements",
+    label: "Student Success",
+    description:
+      "Celebrate student success stories and SOMA's educational impact.",
+  },
+  {
+  title: "SOMA Student Success Center",
+  href: "/student-success-center",
+  label: "Student Support",
+  description:
+    "A support hub for students to ask about courses, advising, achievements, registration, opportunities, and collaboration.",
+  },
+  {
+    title: "Charity",
+    href: "/charity",
+    label: "Community Support",
+    description:
+      "Discover SOMA's past charity work and ways to support our community projects.",
+  },
   {
     title: "Opportunities",
     href: "/opportunities",
@@ -35,27 +58,6 @@ const sections = [
     label: "Student Advising",
     description:
       "Guidance for major advising, university advising, and career planning.",
-  },
-  {
-    title: "Charity",
-    href: "/charity",
-    label: "Community Support",
-    description:
-      "Discover SOMA's past charity work and ways to support our community projects.",
-  },
-  {
-    title: "Achievements",
-    href: "/achievements",
-    label: "Student Success",
-    description:
-      "Celebrate student success stories and SOMA's educational impact.",
-  },
-  {
-    title: "Contact Us",
-    href: "/contact",
-    label: "Get in Touch",
-    description:
-      "Contact SOMA directly through Telegram for questions, registration, or collaboration.",
   },
 ];
 
