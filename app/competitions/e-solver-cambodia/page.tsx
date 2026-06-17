@@ -59,31 +59,18 @@ import { useEffect } from "react";
   public/images/sponsors/cam-asean.png
   public/images/sponsors/newton-learning-center.png
   public/images/sponsors/baktouk-copy.png
-  public/images/sponsors/bakery-sponsor.png
+  public/images/sponsors/bakyong-bakery.png
+  public/images/sponsors/brown-coffee.png
   public/images/sponsors/china-cambodia-times.png
   public/images/sponsors/social-issue-solution-club.png
   public/images/sponsors/opportunities.png
+  public/images/sponsors/linker.png
   public/images/sponsors/paragon-international-university.png
-
-  Gold medalist photos:
-  public/images/competitions/e-solver/gold-medalist-1.jpg
-  public/images/competitions/e-solver/gold-medalist-2.jpg
-  public/images/competitions/e-solver/gold-medalist-3.jpg
-  public/images/competitions/e-solver/gold-medalist-4.jpg
-  public/images/competitions/e-solver/gold-medalist-5.jpg
-  public/images/competitions/e-solver/gold-medalist-6.jpg
-  public/images/competitions/e-solver/gold-medalist-7.jpg
-  public/images/competitions/e-solver/gold-medalist-8.jpg
-  public/images/competitions/e-solver/gold-medalist-9.jpg
-  public/images/competitions/e-solver/gold-medalist-10.jpg
-  public/images/competitions/e-solver/gold-medalist-11.jpg
-  public/images/competitions/e-solver/gold-medalist-12.jpg
+  public/images/sponsors/dongkouv.png
 */
 
-const telegramLink = "https://t.me/esolvercambodianews";
 const somaTelegramLink = "https://t.me/somaeducationgroup";
 const telegramLink2 = "https://t.me/esolvercambodiatalk";
-const resultLink = "#replace-with-result-drive-link";
 
 const gallery2025DriveLink =
   "https://drive.google.com/drive/folders/1DV6bcc-tbXK2WnpHeZzIgIUyMMGiNYs4?usp=sharing";
@@ -97,10 +84,6 @@ type Stat = {
   label: string;
 };
 
-type Award = {
-  title: string;
-  text: string;
-};
 
 type Material = {
   title: string;
@@ -121,13 +104,6 @@ type Sponsor = {
   logoShape?: "square" | "wide";
 };
 
-type GoldMedalist = {
-  name: string;
-  grade: string;
-  subject: string;
-  school: string;
-  image: string;
-};
 
 type FAQ = {
   question: string;
@@ -140,7 +116,6 @@ const navigationButtons = [
   { label: "Gallery", href: "#gallery" },
   { label: "Materials", href: "#materials" },
   { label: "Sponsors", href: "#sponsors" },
-  { label: "Results", href: "#results" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -163,14 +138,6 @@ const impactStats: Stat[] = [
   },
 ];
 
-const subjects = [
-  "Mathematics",
-  "Physics",
-  "Chemistry",
-  "Technology-Enhanced Learning",
-  "Problem Solving",
-  "Digital Literacy",
-];
 
 const audienceDetails = [
   {
@@ -191,20 +158,6 @@ const audienceDetails = [
   },
 ];
 
-const awards: Award[] = [
-  {
-    title: "Medalists",
-    text: "Each subject and grade category recognizes one gold medalist, one silver medalist, one bronze medalist, and three honorable mentions.",
-  },
-  {
-    title: "Certificates",
-    text: "Medalists and selected high-performing students receive certificates of appreciation. Every participant receives a certificate of participation.",
-  },
-  {
-    title: "Scholarships and Benefits",
-    text: "Students may receive scholarships, books, coupons, sponsor benefits, and future opportunities from SOMA Education Group and partners.",
-  },
-];
 
 const highlightImages: HighlightImage[] = [
   {
@@ -262,28 +215,6 @@ const aboutImages: HighlightImage[] = [
   },
 ];
 
-const audienceImages: HighlightImage[] = [
-  {
-    title: "Grade 7-9 Students",
-    text: "Lower secondary students can start building competition confidence early.",
-    image: "/images/competitions/e-solver/audience-grade-7-9.jpg",
-  },
-  {
-    title: "Grade 10-12 Students",
-    text: "Upper secondary students can test their readiness and strengthen STEM problem solving.",
-    image: "/images/competitions/e-solver/audience-grade-10-12.jpg",
-  },
-  {
-    title: "Public and Private Schools",
-    text: "The competition welcomes students from different school systems across Cambodia.",
-    image: "/images/competitions/e-solver/audience-public-private.jpg",
-  },
-  {
-    title: "Urban and Rural Learners",
-    text: "Online participation helps make the opportunity more accessible to students nationwide.",
-    image: "/images/competitions/e-solver/audience-rural-urban.jpg",
-  },
-];
 
 const gallery2025 = [
   "/images/competitions/e-solver/gallery-2025-1.jpg",
@@ -337,13 +268,19 @@ const competitionMaterials: Material[] = [
 const sponsors2025: Sponsor[] = [
   {
     name: "CAM-ASEAN International School",
-    type: "Diamond Sponsor and Venue Sponsor",
+    type: "Scholarship / Venue Sponsor",
     logo: "/images/sponsors/cam-asean.png",
   },
   {
     name: "Newton Learning Center",
-    type: "Scholarship / Learning Sponsor",
+    type: "Scholarship Sponsor",
     logo: "/images/sponsors/newton-learning-center.png",
+  },
+  {
+    name: "Brown Coffee",
+    type: "Food Sponsor",
+    logo: "/images/sponsors/brown-coffee.png",
+    logoShape: "wide",
   },
   {
     name: "Baktouk Copy",
@@ -351,10 +288,11 @@ const sponsors2025: Sponsor[] = [
     logo: "/images/sponsors/baktouk-copy.png",
   },
   {
-    name: "Bakery Sponsor",
+    name: "BakYong Bakery",
     type: "Food Sponsor",
-    logo: "/images/sponsors/bakery-sponsor.png",
+    logo: "/images/sponsors/bakyong-bakery.png",
   },
+  
   {
     name: "The China-Cambodia Times",
     type: "Media Partner",
@@ -370,116 +308,39 @@ const sponsors2025: Sponsor[] = [
     type: "Media Partner",
     logo: "/images/sponsors/opportunities.png",
   },
+  {
+    name: "Linker",
+    type: "Media Partner",
+    logo: "/images/sponsors/linker.png",
+  },
 ];
 
 const sponsors2024: Sponsor[] = [
   {
     name: "Paragon International University",
-    type: "Venue / Academic Partner",
+    type: "Venue Sponsor",
     logo: "/images/sponsors/paragon-international-university.png",
     logoShape: "wide",
   },
   {
-    name: "CAM-ASEAN International School",
-    type: "Education Partner",
-    logo: "/images/sponsors/cam-asean.png",
-  },
-  {
     name: "Newton Learning Center",
-    type: "Learning Sponsor",
+    type: "Scholarship Sponsor",
     logo: "/images/sponsors/newton-learning-center.png",
   },
   {
-    name: "Baktouk Copy",
-    type: "Product / Printing Sponsor",
-    logo: "/images/sponsors/baktouk-copy.png",
-  },
-];
-
-const goldMedalists: GoldMedalist[] = [
-  {
-    name: "Gold Medalist Name",
-    grade: "Grade 7",
-    subject: "Mathematics",
-    school: "School Name",
-    image: "/images/competitions/e-solver/gold-medalist-1.jpg",
+    name: "BakYong Bakery",
+    type: "Food Sponsor",
+    logo: "/images/sponsors/bakyong-bakery.png",
   },
   {
-    name: "Gold Medalist Name",
-    grade: "Grade 7",
-    subject: "Physics",
-    school: "School Name",
-    image: "/images/competitions/e-solver/gold-medalist-2.jpg",
+    name: "Dongkouv",
+    type: "Media Sponsor",
+    logo: "/images/sponsors/dongkouv.png",
   },
   {
-    name: "Gold Medalist Name",
-    grade: "Grade 7",
-    subject: "Chemistry",
-    school: "School Name",
-    image: "/images/competitions/e-solver/gold-medalist-3.jpg",
-  },
-  {
-    name: "Gold Medalist Name",
-    grade: "Grade 8",
-    subject: "Mathematics",
-    school: "School Name",
-    image: "/images/competitions/e-solver/gold-medalist-4.jpg",
-  },
-  {
-    name: "Gold Medalist Name",
-    grade: "Grade 8",
-    subject: "Physics",
-    school: "School Name",
-    image: "/images/competitions/e-solver/gold-medalist-5.jpg",
-  },
-  {
-    name: "Gold Medalist Name",
-    grade: "Grade 8",
-    subject: "Chemistry",
-    school: "School Name",
-    image: "/images/competitions/e-solver/gold-medalist-6.jpg",
-  },
-  {
-    name: "Gold Medalist Name",
-    grade: "Grade 9",
-    subject: "Mathematics",
-    school: "School Name",
-    image: "/images/competitions/e-solver/gold-medalist-7.jpg",
-  },
-  {
-    name: "Gold Medalist Name",
-    grade: "Grade 9",
-    subject: "Physics",
-    school: "School Name",
-    image: "/images/competitions/e-solver/gold-medalist-8.jpg",
-  },
-  {
-    name: "Gold Medalist Name",
-    grade: "Grade 9",
-    subject: "Chemistry",
-    school: "School Name",
-    image: "/images/competitions/e-solver/gold-medalist-9.jpg",
-  },
-  {
-    name: "Gold Medalist Name",
-    grade: "Grade 10",
-    subject: "Mathematics",
-    school: "School Name",
-    image: "/images/competitions/e-solver/gold-medalist-10.jpg",
-  },
-  {
-    name: "Gold Medalist Name",
-    grade: "Grade 11",
-    subject: "Physics",
-    school: "School Name",
-    image: "/images/competitions/e-solver/gold-medalist-11.jpg",
-  },
-  {
-    name: "Gold Medalist Name",
-    grade: "Grade 12",
-    subject: "Chemistry",
-    school: "School Name",
-    image: "/images/competitions/e-solver/gold-medalist-12.jpg",
+    name: "Social Issue Solution Club",
+    type: "Media Partner",
+    logo: "/images/sponsors/social-issue-solution-club.png",
   },
 ];
 
@@ -612,11 +473,13 @@ function ImageStoryCard({
       />
 
       <div className="p-5">
-        <p className="text-xs font-black uppercase tracking-wide text-emerald-700">
-          {label} {index + 1}
-        </p>
+        {label ? (
+          <p className="text-xs font-black uppercase tracking-wide text-emerald-700">
+            {label} {index + 1}
+          </p>
+        ) : null}
 
-        <h3 className="mt-2 text-xl font-black transition group-hover:text-blue-700">
+        <h3 className={label ? "mt-2 text-xl font-black transition group-hover:text-blue-700" : "text-xl font-black transition group-hover:text-blue-700"}>
           {item.title}
         </h3>
 
@@ -667,25 +530,29 @@ function SponsorCard({
     <div
       data-reveal
       style={{ transitionDelay: String(index * 60) + "ms" }}
-      className="group w-[280px] shrink-0 snap-start rounded-[2rem] border border-slate-200 bg-white p-6 text-center shadow-sm transition-all duration-500 hover:-translate-y-3 hover:scale-[1.02] hover:shadow-2xl active:scale-[0.98]"
+      className="group flex min-h-[320px] w-[280px] shrink-0 snap-start flex-col rounded-[2rem] border border-slate-200 bg-white p-6 text-center shadow-sm transition-all duration-500 hover:-translate-y-3 hover:scale-[1.02] hover:border-blue-200 hover:shadow-2xl active:scale-[0.98] md:w-[300px]"
     >
-      <div className="flex aspect-video items-center justify-center overflow-hidden rounded-3xl bg-slate-50 p-5 transition group-hover:bg-blue-50">
+      <div className="flex h-36 items-center justify-center overflow-hidden rounded-3xl bg-slate-50 p-5 transition duration-300 group-hover:bg-blue-50">
         <img
           src={sponsor.logo}
           alt={sponsor.name + " logo"}
           className={
             isWideLogo
-              ? "max-h-16 w-full max-w-[220px] object-contain"
-              : "max-h-24 max-w-[125px] object-contain"
+              ? "max-h-20 w-full max-w-[245px] object-contain"
+              : "max-h-24 max-w-[130px] object-contain"
           }
         />
       </div>
 
-      <h3 className="mt-5 text-xl font-black transition group-hover:text-blue-700">
-        {sponsor.name}
-      </h3>
+      <div className="flex flex-1 flex-col">
+        <h3 className="mt-5 flex min-h-[3.5rem] items-center justify-center text-xl font-black leading-tight transition group-hover:text-blue-700">
+          {sponsor.name}
+        </h3>
 
-      <p className="mt-2 text-sm font-bold text-blue-700">{sponsor.type}</p>
+        <p className="mt-auto inline-flex min-h-[2.5rem] items-center justify-center rounded-full bg-blue-50 px-4 py-2 text-sm font-bold text-blue-700 transition duration-300 group-hover:bg-blue-700 group-hover:text-white">
+          {sponsor.type}
+        </p>
+      </div>
     </div>
   );
 }
@@ -703,7 +570,10 @@ function SponsorYearSection({
 }) {
   return (
     <div className="mt-12">
-      <div data-reveal className="mb-6 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+      <div
+        data-reveal
+        className="mb-6 flex flex-col gap-3 md:flex-row md:items-end md:justify-between"
+      >
         <div>
           <p className="text-sm font-black uppercase tracking-wide text-blue-700">
             {year} Sponsors
@@ -712,10 +582,15 @@ function SponsorYearSection({
           <h3 className="mt-2 text-3xl font-black">{title}</h3>
         </div>
 
-        <p className="max-w-2xl leading-7 text-slate-600">{text}</p>
+        {text ? <p className="max-w-2xl leading-7 text-slate-600">{text}</p> : null}
       </div>
 
-      <div className="flex snap-x gap-6 overflow-x-auto scroll-smooth pb-8">
+      <div className="mb-4 flex items-center gap-2 text-sm font-semibold text-slate-500">
+        <span className="inline-flex h-2 w-2 rounded-full bg-blue-600" />
+        <span>Scroll left or right to view all partners</span>
+      </div>
+
+      <div className="sponsor-scroll -mx-6 flex snap-x items-stretch gap-6 overflow-x-auto scroll-smooth px-6 pb-8 pt-1">
         {sponsors.map((sponsor, index) => (
           <SponsorCard
             key={year + sponsor.name}
@@ -775,6 +650,29 @@ export default function ESolverCambodiaPage() {
           ::selection {
             background: #bfdbfe;
             color: #172554;
+          }
+
+          .sponsor-scroll {
+            scrollbar-width: thin;
+            scrollbar-color: #2563eb #e2e8f0;
+          }
+
+          .sponsor-scroll::-webkit-scrollbar {
+            height: 10px;
+          }
+
+          .sponsor-scroll::-webkit-scrollbar-track {
+            border-radius: 999px;
+            background: #e2e8f0;
+          }
+
+          .sponsor-scroll::-webkit-scrollbar-thumb {
+            border-radius: 999px;
+            background: #2563eb;
+          }
+
+          .sponsor-scroll::-webkit-scrollbar-thumb:hover {
+            background: #1d4ed8;
           }
 
           @media (prefers-reduced-motion: reduce) {
@@ -847,15 +745,6 @@ export default function ESolverCambodiaPage() {
                   className="rounded-full bg-white px-8 py-3 text-center font-bold text-blue-800 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-50 hover:shadow-lg active:scale-95"
                 >
                   Join E-Solver Cambodia Updates
-                </a>
-
-                <a
-                  href={resultLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full border border-white/30 bg-white/10 px-8 py-3 text-center font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-blue-800 hover:shadow-lg active:scale-95"
-                >
-                  View Student Results
                 </a>
               </div>
             </div>
@@ -1200,6 +1089,8 @@ export default function ESolverCambodiaPage() {
             </h2>
 
             <p className="mt-5 max-w-4xl leading-8 text-slate-600">
+              Sponsor logos are separated by season so each year can show the
+              correct partner placement and recognition.
             </p>
           </div>
 
@@ -1218,70 +1109,6 @@ export default function ESolverCambodiaPage() {
           />
         </div>
       </section>
-
-      <section
-        id="results"
-        className="bg-gradient-to-br from-blue-950 via-slate-950 to-slate-950 px-6 py-20 text-white"
-      >
-        <div className="mx-auto max-w-7xl">
-          <div data-reveal className="mx-auto mb-12 max-w-4xl text-center">
-            <p className="inline-flex rounded-full bg-white/10 px-5 py-2 text-sm font-bold uppercase tracking-wide text-blue-100">
-              Results and Gold Medalists
-            </p>
-
-            <h2 className="mt-5 text-4xl font-black md:text-5xl">
-              E-Solver Cambodia Results
-            </h2>
-
-
-            <a
-              href={resultLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex rounded-full bg-white px-8 py-3 font-bold text-blue-800 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-50 hover:shadow-lg active:scale-95"
-            >
-              View Full Result (Coming Soon)
-            </a>
-          </div>
-
-          """<div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {goldMedalists.map((student, index) => (
-              <div
-                key={student.grade + student.subject + String(index)}
-                data-reveal
-                style={{ transitionDelay: String(index * 45) + "ms" }}
-                className="group overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/10 transition-all duration-500 hover:-translate-y-3 hover:scale-[1.02] hover:bg-white/15 hover:shadow-2xl active:scale-[0.98]"
-              >
-                <div
-                  className="aspect-[4/3] bg-gradient-to-br from-blue-200 via-white to-yellow-200 bg-cover bg-center transition duration-700 group-hover:scale-110"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(135deg, rgba(23,70,214,0.10), rgba(15,23,42,0.20)), url(" +
-                      student.image +
-                      ")",
-                  }}
-                />
-
-                <div className="p-5">
-                  <p className="text-xs font-black uppercase tracking-wide text-yellow-200">
-                    Gold Medalist
-                  </p>
-
-                  <h3 className="mt-2 text-lg font-black">{student.name}</h3>
-
-                  <p className="mt-1 text-sm text-slate-300">
-                    {student.grade} • {student.subject}
-                  </p>
-
-                  <p className="mt-2 text-sm text-slate-400">
-                    {student.school}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>"""
 
       <section id="faq" className="px-6 py-20">
         <div className="mx-auto max-w-4xl">

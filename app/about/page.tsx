@@ -8,7 +8,7 @@ const storyImage = "/images/about/soma-story.jpg";
 /*
   About page image and file paths
 
-  Story image beside the section "Built from a belief in student potential":
+  Story image:
   public/images/about/soma-story.jpg
 
   Team portraits:
@@ -20,16 +20,8 @@ const storyImage = "/images/about/soma-story.jpg";
   public/images/team/vp-external.jpg
   public/images/team/vp-operations.jpg
 
-  CV files:
-  public/files/narith-chan-cv.pdf
-  public/files/beatrice-doran-cv.pdf
-
-  Recommended image sizes:
-  Story image: 1200 x 900 px, ratio 4:3
-  Team portraits: 900 x 1200 px, ratio 3:4
-
-  In code, image paths must start with /images/ or /files/
-  Do not write public/images/ or public/files/ inside href or image paths.
+  In code, image paths must start with /images/
+  Do not write public/images/ inside image paths.
 */
 
 type Entity = {
@@ -50,7 +42,6 @@ type TeamMember = {
   status?: string;
   image: string;
   description: string;
-  cvHref?: string;
 };
 
 const entities: Entity[] = [
@@ -69,11 +60,11 @@ const entities: Entity[] = [
       "SOMA Competitions includes E-Solver Cambodia, Cambodia Mathematics and Physics Olympiad, and Math Genius Olympiad, giving students opportunities to challenge themselves in STEM and problem-solving.",
   },
   {
-    name: "Soma Student Success Center",
+    name: "SOMA Student Success Center",
     label: "Student Development",
     href: "/student-success-center",
     description:
-      "Soma Student Success Center helps students prepare for life after Grade 12 and university through CV support, student advising, career guidance, major planning, and future learning opportunities.",
+      "SOMA Student Success Center helps students prepare for life after Grade 12 and university through CV support, student advising, career guidance, major planning, and future learning opportunities.",
   },
 ];
 
@@ -100,29 +91,26 @@ const founders: TeamMember[] = [
     name: "Narith Chan",
     role: "Co-Founder / Co-President",
     image: "/images/team/chan-narith.jpg",
-    cvHref: "/files/narith-chan-cv.pdf",
     description:
-      "A physics student in the USA, Narith ranked Top 2 in Cambodia’s National Outstanding Student Exam in Physics in 2023 and achieved Grade A in the Cambodian Baccalaureate Examination. Through SOMA, he supports Cambodian students in STEM learning, competitions, and academic growth.",
+      "A physics student in the USA, Narith ranked Top 2 in Cambodia's National Outstanding Student Exam in Physics in 2023 and achieved Grade A in the Cambodian Baccalaureate Examination. Through SOMA, he supports Cambodian students in STEM learning, competitions, and academic growth.",
   },
   {
     name: "Beatrice Doran",
     role: "Co-Founder / Co-President",
     image: "/images/team/doran-beatrice.jpg",
-    cvHref: "/files/beatrice-doran-cv.pdf",
     description:
-      "Beatrice interests in finance and real estate in Canada, with experience in investment and education initiatives. Her background includes National Outstanding Student Exam participation in Grade 9 and Grade 12, as well as achieving Grade A in the Cambodian Baccalaureate Examination.",
+      "Beatrice is interested in finance and real estate in Canada, with experience in investment and education initiatives. Her background includes National Outstanding Student Exam participation in Grade 9 and Grade 12, as well as achieving Grade A in the Cambodian Baccalaureate Examination.",
   },
 ];
 
-
 const executiveTeam: TeamMember[] = [
   {
-    name: "Lim Souhoang",
+    name: "Souhoang Lim",
     role: "First Vice President",
     status: "Executive Leadership",
     image: "/images/team/lim-souhoang.jpg",
     description:
-      "Add short professional background, education, achievements, leadership experience, and responsibilities here.",
+      "Souhoang Lim serves as First Vice President of SOMA Education Group. She is currently studying Medical Doctor at the University of Health Sciences and supports SOMA through leadership, academic coordination, and student development. Her past experience includes serving on the E-Solver Cambodia Board of Directors. She is a former National Math Outstanding Student, a former Grade A student in the Cambodian Baccalaureate Examination, and has experience as a Biology Tutor for Baccalaureate preparation.",
   },
   {
     name: "VP Academic",
@@ -172,7 +160,6 @@ function TeamCard({
   status,
   image,
   description,
-  cvHref,
   index,
 }: TeamMember & { index: number }) {
   return (
@@ -195,7 +182,6 @@ function TeamCard({
         </div>
 
         <div className="flex flex-col justify-center p-7">
-          {/* Optional label. Remove this status block or leave status empty if you want more space for a longer personal summary. */}
           {status ? (
             <p className="text-sm font-black uppercase tracking-wide text-blue-700">
               {status}
@@ -209,17 +195,6 @@ function TeamCard({
           <p className="mt-2 font-bold text-yellow-700">{role}</p>
 
           <p className="mt-5 leading-8 text-slate-600">{description}</p>
-
-          {cvHref ? (
-            <a
-              href={cvHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex w-fit rounded-full bg-blue-700 px-6 py-3 font-bold text-white transition hover:-translate-y-1 hover:bg-blue-800 hover:shadow-lg"
-            >
-              View My CV
-            </a>
-          ) : null}
         </div>
       </div>
     </article>
@@ -451,6 +426,40 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 px-6 py-20 text-white">
+        <div className="mx-auto max-w-7xl">
+          <div data-reveal className="mb-12 max-w-4xl">
+            <p className="inline-flex rounded-full bg-white/10 px-5 py-2 text-sm font-bold uppercase tracking-wide text-blue-100">
+              Leadership
+            </p>
+
+            <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl">
+              Founders
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-slate-300">
+              The founders provide long-term direction, strategy, and advising
+              support for SOMA Education Group while building student-centered
+              academic opportunities.
+            </p>
+          </div>
+
+          <div className="grid gap-6 xl:grid-cols-2">
+            {founders.map((person, index) => (
+              <TeamCard
+                key={person.name}
+                name={person.name}
+                role={person.role}
+                status={person.status}
+                image={person.image}
+                description={person.description}
+                index={index}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-white px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <div data-reveal className="mb-12 max-w-4xl">
@@ -482,41 +491,6 @@ export default function AboutPage() {
                   {value.description}
                 </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 px-6 py-20 text-white">
-        <div className="mx-auto max-w-7xl">
-          <div data-reveal className="mb-12 max-w-4xl">
-            <p className="inline-flex rounded-full bg-white/10 px-5 py-2 text-sm font-bold uppercase tracking-wide text-blue-100">
-              Leadership
-            </p>
-
-            <h2 className="mt-5 text-4xl font-black tracking-tight md:text-5xl">
-              Founders
-            </h2>
-
-            <p className="mt-5 text-lg leading-8 text-slate-300">
-              The founders provide long-term direction, strategy, and advising
-              support for SOMA Education Group while building student-centered
-              academic opportunities.
-            </p>
-          </div>
-
-          <div className="grid gap-6 xl:grid-cols-2">
-            {founders.map((person, index) => (
-              <TeamCard
-                key={person.name}
-                name={person.name}
-                role={person.role}
-                status={person.status}
-                image={person.image}
-                description={person.description}
-                cvHref={person.cvHref}
-                index={index}
-              />
             ))}
           </div>
         </div>
