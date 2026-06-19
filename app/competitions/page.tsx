@@ -47,7 +47,7 @@ const competitions: Competition[] = [
     shortName: "E-SC",
     image: "/images/e-solver-logo.png",
     logoWidth: "260px",
-    channelLink: "https://t.me/esolvercambodianews",
+    channelLink: "https://t.me/esolvercambodiatalk",
     infoHref: "/competitions/e-solver-cambodia",
     description:
       "E-Solver Cambodia is a student-centered competition project that promotes creative problem-solving, academic teamwork, and real-world thinking.",
@@ -218,7 +218,7 @@ function CompetitionCard({
               rel="noopener noreferrer"
               className="inline-flex rounded-full bg-blue-700 px-6 py-3 text-center font-bold text-white transition hover:-translate-y-1 hover:bg-blue-800 hover:shadow-lg"
             >
-              Join {competition.shortName} Channel
+              Join {competition.shortName} Group
             </a>
 
             <a
@@ -506,7 +506,7 @@ export default function CompetitionsPage() {
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl leading-8 text-blue-100">
-            Join each competition channel for announcements, registration
+            Join SOMA Education Channel for announcements, registration
             details, competition updates, rules, eligibility, and important
             dates. More competitions will be announced soon.
           </p>
