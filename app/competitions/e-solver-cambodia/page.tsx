@@ -217,12 +217,12 @@ const aboutImages: HighlightImage[] = [
 
 
 const gallery2025 = [
-  "/images/competitions/e-solver/gallery-2025-1.jpg",
-  "/images/competitions/e-solver/gallery-2025-2.jpg",
-  "/images/competitions/e-solver/gallery-2025-3.jpg",
-  "/images/competitions/e-solver/gallery-2025-4.jpg",
-  "/images/competitions/e-solver/gallery-2025-5.jpg",
-  "/images/competitions/e-solver/gallery-2025-6.jpg",
+  "/images/competitions/e-solver/gallery-2025-1.JPG",
+  "/images/competitions/e-solver/gallery-2025-2.JPG",
+  "/images/competitions/e-solver/gallery-2025-3.JPG",
+  "/images/competitions/e-solver/gallery-2025-4.JPG",
+  "/images/competitions/e-solver/gallery-2025-5.JPG",
+  "/images/competitions/e-solver/gallery-2025-6.JPG",
 ];
 
 const gallery2024 = [
