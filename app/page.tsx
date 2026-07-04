@@ -53,11 +53,11 @@ const sections = [
       "Join SOMA as a volunteer, team member, partner, or sponsor.",
   },
   {
-    title: "Consulting",
+    title: "SOMA Tech School",
     href: "/consulting",
-    label: "Student Advising",
+    label: "Coding School",
     description:
-      "Guidance for major advising, university advising, and career planning.",
+      "Build Cambodia's next generation of technology creators.",
   },
 ];
 
