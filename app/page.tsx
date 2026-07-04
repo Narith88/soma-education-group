@@ -54,7 +54,7 @@ const sections = [
   },
   {
     title: "SOMA Tech School",
-    href: "/consulting",
+    href: "/soma-tech",
     label: "Coding School",
     description:
       "Build Cambodia's next generation of technology creators.",
