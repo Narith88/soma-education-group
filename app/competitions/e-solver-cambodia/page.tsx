@@ -1088,7 +1088,7 @@ export default function ESolverCambodiaPage() {
                 </h2>
 
                 <p className="mt-3 leading-7 text-slate-300">
-                  Over 3,000 students have participated across four seasons, making E-Solver Cambodia one of the leading student STEM competition projects under SOMA Education Group.
+                  Over 5,000 students have participated across four seasons, making E-Solver Cambodia one of the leading student STEM competition projects under SOMA Education Group.
                 </p>
               </div>
             </div>
