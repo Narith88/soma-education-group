@@ -142,9 +142,9 @@ const impactStats: Stat[] = [
     label: "Established Since",
   },
   {
-    value: "3,000+",
+    value: "5,000+",
     label: "Student Participants Across 4 Seasons",
-    countTo: 3000,
+    countTo: 5000,
     suffix: "+",
   },
   {
@@ -513,8 +513,8 @@ const floatingFormulas = [
   { text: "H₂O", top: "8%", left: "70%", delay: "-6s", duration: "17s" },
   { text: "0 1 0 1", top: "3%", left: "50%", delay: "-2s", duration: "19s" },
   { text: "a²+b²=c²", top: "12%", left: "80%", delay: "-7s", duration: "20s" },
-  { text: "∀x → logic", top: "32%", left: "%80", delay: "-4s", duration: "15s" },
-  { text: "NaCl", top: "18%", left: "42%", delay: "-9s", duration: "21s" },
+  { text: "∀x → logic", top: "42%", left: "%88", delay: "-4s", duration: "15s" },
+  { text: "NaCl", top: "9%", left: "32%", delay: "-9s", duration: "21s" },
   { text: "if / then", top: "4%", left: "1%", delay: "-5s", duration: "18s" },
 ];
 
