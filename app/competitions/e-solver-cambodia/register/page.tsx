@@ -13,8 +13,7 @@ import { useState, useRef, type ChangeEvent, type FormEvent, type ReactNode } fr
   4. Connect "Register Now" button on E-Solver page to: /competitions/e-solver-cambodia/register
 */
 
-const GOOGLE_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbxWoqWgIYREvyoNU2viloHHBjaL-HHtStA2wHJJmeXfgl04Lze1dJ6ow4pzeqEECqE/exec";
+const GOOGLE_SCRIPT_URL = "/api/e-solver-cambodia/register";
 
 const REGISTRATION_PAGE_URL =
   "https://soma-education-group.vercel.app/competitions/e-solver-cambodia/register";
@@ -425,7 +424,7 @@ export default function RegisterPage() {
                   grade level.
                 </p>
                 <p className="text-xs text-amber-700">
-                  សិស្សត្រូវចុះឈ្មោះតាមថ្នាក់បច្ចុប្បន្នរបស់ពួកគេ។
+                  បេក្ខជនត្រូវចុះឈ្មោះតាមកម្រិតថ្នាក់នាពេលបច្ចុប្បន្ន។
                 </p>
               </div>
             </div>
