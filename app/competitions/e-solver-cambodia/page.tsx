@@ -114,7 +114,6 @@ type FAQ = {
 };
 
 type SubjectCard = {
-  icon: string;
   title: string;
   titleKh: string;
   description: string;
@@ -159,28 +158,24 @@ const impactStats: Stat[] = [
 
 const competitionSubjects: SubjectCard[] = [
   {
-    icon: "📐",
     title: "Mathematical Reasoning",
     titleKh: "ការវែកញែកក្នុងគណិតវិទ្យា",
     description:
       "Pattern recognition, logical deduction, number sense, and applied math problems. Not just computation — real mathematical thinking.",
   },
   {
-    icon: "🔬",
     title: "Science Reasoning",
     titleKh: "ការវែកញែកក្នុងវិទ្យាសាស្ត្រ",
     description:
       "Applied questions integrating Physics and Chemistry concepts. Analyze scenarios, interpret data, and solve real scientific problems.",
   },
   {
-    icon: "💻",
     title: "Technology & Computational Thinking",
     titleKh: "បច្ចេកវិទ្យា និងការគិតបែបគណនា",
     description:
       "How systems work, basic algorithms, flowchart reasoning, data interpretation, and digital problem-solving. No coding required.",
   },
   {
-    icon: "🧩",
     title: "Logic & Analytical Thinking",
     titleKh: "តក្កវិជ្ជា និងការគិតបែបវិភាគ",
     description:
@@ -1187,9 +1182,6 @@ export default function ESolverCambodiaPage() {
                 style={{ transitionDelay: String(index * 90) + "ms" }}
                 className="group rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur transition-all duration-500 hover:-translate-y-3 hover:bg-white/10 hover:shadow-2xl"
               >
-                <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10 text-3xl transition duration-300 group-hover:scale-110">
-                  {subject.icon}
-                </div>
 
                 <h3 className="text-2xl font-black">{subject.title}</h3>
 

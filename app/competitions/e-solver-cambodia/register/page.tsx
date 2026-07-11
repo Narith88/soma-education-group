@@ -65,6 +65,11 @@ type FormState = {
   agreeUpdates: boolean;
 };
 
+const PAYMENT_QR_IMAGE =
+  "/images/competitions/e-solver/e-solver-payment-qr.jpg";
+
+const PAYMENT_BANK_ACCOUNT = "018 122 353";
+
 const initial: FormState = {
   nameEn: "", nameKh: "", dob: "", gender: "", grade: "", category: "",
   schoolEn: "", schoolKh: "", schoolType: "", province: "",
@@ -789,6 +794,51 @@ export default function RegisterPage() {
                   Payment Information — Registration fee: $4
                 </p>
 
+                {/* Payment QR + Account Info */}
+                <div className="mb-6 rounded-2xl border border-blue-180 bg-white p-4 shadow-sm">
+                  <div className="grid gap-5 md:grid-cols-[180px_1fr] md:items-center">
+                    <div className="mx-auto w-45">
+                      <img
+                        src={PAYMENT_QR_IMAGE}
+                        alt="E-Solver Cambodia payment QR code"
+                        className="aspect-square w-full rounded-xl border border-slate-200 bg-white object-cover p-2 shadow-sm"
+                      />
+                    </div>
+
+                    <div>
+                      <p className="text-sm font-bold text-slate-900">
+                        Scan QR Code to Pay
+                      </p>
+                      <p className="mt-1 text-xs text-emerald-700">
+                        សូមស្កេន QR Code ដើម្បីបង់ថ្លៃចុះឈ្មោះ
+                      </p>
+
+                      <div className="mt-4 rounded-xl bg-blue-50 p-4">
+                        <p className="text-sm text-slate-700">
+                          Registration Fee
+                        </p>
+                        <p className="text-lg font-black text-blue-800">
+                          $4
+                        </p>
+
+                        <p className="mt-3 text-sm text-slate-700">
+                          Bank Account
+                        </p>
+                        <p className="text-lg font-black tracking-wide text-slate-900">
+                          {PAYMENT_BANK_ACCOUNT}
+                        </p>
+                      </div>
+
+                      <p className="mt-3 text-xs text-slate-500">
+                        After payment, please upload your payment proof below. If you have any problem, please contact us through telegram.
+                      </p>
+                      <p className="text-xs text-emerald-700">
+                        បន្ទាប់ពីបង់ប្រាក់ សូមបញ្ចូលរូបភាពបញ្ជាក់ការបង់ប្រាក់ខាងក្រោម។ បើមានបញ្ហាកើតទ្បើង​សូមទាក់ទងមកពួកយើងតាមតេលេក្រាម។
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
                 <Field label="Payment Method" required>
                   <select
                     className={selectClass}
@@ -810,18 +860,35 @@ export default function RegisterPage() {
                     onChange={(e) => handleFile(e, setPaymentProof, setPayPreview)}
                     className="block w-full text-sm text-slate-600 file:mr-3 file:rounded-full file:border-0 file:bg-blue-100 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-blue-700 hover:file:bg-blue-200"
                   />
-                  <p className="mt-1 text-xs text-slate-500">PNG, JPG, JPEG, or PDF. Maximum 5 MB.</p>
+                  <p className="mt-1 text-xs text-slate-500">
+                    PNG, JPG, JPEG, or PDF. Maximum 5 MB.
+                  </p>
                   {payPreview && payPreview.startsWith("blob:") && (
-                    <img src={payPreview} alt="Preview" className="mt-2 h-24 rounded-lg object-cover" />
+                    <img
+                      src={payPreview}
+                      alt="Preview"
+                      className="mt-2 h-24 rounded-lg object-cover"
+                    />
                   )}
                 </Field>
 
                 <div className="grid gap-4 md:grid-cols-2">
                   <Field label="Payment Account Name (optional)">
-                    <input type="text" className={inputClass} value={form.paymentAccount} onChange={(e) => update("paymentAccount", e.target.value)} />
+                    <input
+                      type="text"
+                      className={inputClass}
+                      value={form.paymentAccount}
+                      onChange={(e) => update("paymentAccount", e.target.value)}
+                    />
                   </Field>
+
                   <Field label="Transaction Note (optional)">
-                    <input type="text" className={inputClass} value={form.transactionNote} onChange={(e) => update("transactionNote", e.target.value)} />
+                    <input
+                      type="text"
+                      className={inputClass}
+                      value={form.transactionNote}
+                      onChange={(e) => update("transactionNote", e.target.value)}
+                    />
                   </Field>
                 </div>
               </div>
@@ -831,7 +898,7 @@ export default function RegisterPage() {
           {/* ═══ Section 5: Referral ═══ */}
           <SectionCard
             title="How Did You Hear About Us?"
-            titleKh="តើអ្នកបានស្គាល់ E-Solver Cambodia 2.0 តាមរយៈណា"
+            titleKh="តើអ្នកបានស្គាល់ E-Solver Cambodia 2.0 តាមរយៈអ្វី?"
           >
             <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {[
