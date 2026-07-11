@@ -16,7 +16,7 @@ import { useState, useRef, type ChangeEvent, type FormEvent, type ReactNode } fr
 const GOOGLE_SCRIPT_URL = "/api/e-solver-cambodia/register";
 
 const REGISTRATION_PAGE_URL =
-  "https://soma-education-group.vercel.app/competitions/e-solver-cambodia/register";
+  "https://www.somaeducationgroup.com/competitions/e-solver-cambodia/register";
 
 const QR_API =
   "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=";

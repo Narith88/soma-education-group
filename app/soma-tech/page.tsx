@@ -40,7 +40,7 @@ const pageHtml = String.raw`
   <div class="container">
     <div class="hero-inner">
       <div class="hero-text reveal">
-        <a class="hero-badge hero-badge-link" href="https://soma-education-group.vercel.app/" target="_blank" rel="noopener">
+        <a class="hero-badge hero-badge-link" href="https://www.somaeducationgroup.com/" target="_blank" rel="noopener">
           <span class="hero-badge-dot"></span>
           Under SOMA Education Group
         </a>
@@ -682,7 +682,7 @@ const pageHtml = String.raw`
           Technology education should not stop at watching tutorials. Students need a pathway, a mentor, and real projects they are proud to explain.
         </div>
         <div class="founder-links">
-          <a href="https://soma-education-group.vercel.app" target="_blank" rel="noopener" class="founder-link">SOMA Education Group</a>
+          <a href="https://www.somaeducationgroup.com/" target="_blank" rel="noopener" class="founder-link">SOMA Education Group</a>
           <a href="#partners" class="founder-link">Explore Partnerships</a>
         </div>
       </div>
@@ -715,7 +715,7 @@ const pageHtml = String.raw`
 
         <div class="contact-links">
           <a href="https://t.me/somaeducationgroup" target="_blank" rel="noopener" class="contact-link">Telegram</a>
-          <a href="https://soma-education-group.vercel.app" target="_blank" rel="noopener" class="contact-link">SOMA Education Group</a>
+          <a href="https://www.somaeducationgroup.com" target="_blank" rel="noopener" class="contact-link">SOMA Education Group</a>
         </div>
       </div>
 
@@ -765,12 +765,12 @@ const pageHtml = String.raw`
     <h3>SOMA Tech is part of the SOMA Education Group ecosystem.</h3>
     <p>From coding school to academic preparation, competitions, student success, and future consulting services — SOMA supports the full Cambodian student journey.</p>
     <div class="eco-links">
-      <a href="https://soma-education-group.vercel.app/newton-learning-center" target="_blank" rel="noopener" class="eco-link">Newton Learning Center</a>
-      <a href="https://soma-education-group.vercel.app/competitions" target="_blank" rel="noopener" class="eco-link">Competitions</a>
-      <a href="https://soma-education-group.vercel.app/achievements" target="_blank" rel="noopener" class="eco-link">Student Success</a>
-      <a href="https://soma-education-group.vercel.app/charity" target="_blank" rel="noopener" class="eco-link">Charity</a>
-      <a href="https://soma-education-group.vercel.app/opportunities" target="_blank" rel="noopener" class="eco-link">Join SOMA</a>
-      <a href="https://soma-education-group.vercel.app/consulting" target="_blank" rel="noopener" class="eco-link">Consulting</a>
+      <a href="https://www.somaeducationgroup.com/newton-learning-center" target="_blank" rel="noopener" class="eco-link">Newton Learning Center</a>
+      <a href="https://www.somaeducationgroup.com/competitions" target="_blank" rel="noopener" class="eco-link">Competitions</a>
+      <a href="https://www.somaeducationgroup.com/achievements" target="_blank" rel="noopener" class="eco-link">Student Success</a>
+      <a href="https://www.somaeducationgroup.com/charity" target="_blank" rel="noopener" class="eco-link">Charity</a>
+      <a href="https://www.somaeducationgroup.com/opportunities" target="_blank" rel="noopener" class="eco-link">Join SOMA</a>
+      <a href="https://www.somaeducationgroup.com/consulting" target="_blank" rel="noopener" class="eco-link">Consulting</a>
     </div>
   </div>
 </section>
@@ -792,7 +792,7 @@ const pageHtml = String.raw`
         <li><a href="#parents">Parents</a></li>
         <li><a href="#partners">Partners</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="https://soma-education-group.vercel.app" target="_blank" rel="noopener">SOMA Education Group</a></li>
+        <li><a href="https://www.somaeducationgroup.com/" target="_blank" rel="noopener">SOMA Education Group</a></li>
       </ul>
     </div>
     <div class="footer-legal">© 2026 SOMA Tech School · SOMA Education Group · Phnom Penh, Cambodia</div>
