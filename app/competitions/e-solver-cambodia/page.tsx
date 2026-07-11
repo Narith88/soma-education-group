@@ -970,7 +970,7 @@ export default function ESolverCambodiaPage() {
           </div>
 
           <a
-            href={registrationLink}
+            href= "/competitions/e-solver-cambodia/register" 
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-emerald-600 px-5 py-2 text-sm font-black text-white shadow-lg shadow-emerald-900/10 transition hover:-translate-y-0.5 hover:bg-emerald-700 active:scale-95"
@@ -1036,7 +1036,7 @@ export default function ESolverCambodiaPage() {
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <a
-                  href={registrationLink}
+                  href="/competitions/e-solver-cambodia/register" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full bg-emerald-500 px-8 py-3 text-center font-black text-white shadow-lg shadow-emerald-950/20 transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-400 hover:shadow-xl active:scale-95"
@@ -1272,7 +1272,7 @@ export default function ESolverCambodiaPage() {
 
           <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
             <a
-              href={registrationLink}
+              href="/competitions/e-solver-cambodia/register" 
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex rounded-full bg-emerald-600 px-8 py-3 font-black text-white transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-700 hover:shadow-lg active:scale-95"
@@ -1785,7 +1785,7 @@ export default function ESolverCambodiaPage() {
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <a
-              href={registrationLink}
+              href="/competitions/e-solver-cambodia/register" 
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full bg-emerald-500 px-8 py-3 font-black text-white transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-400 hover:shadow-lg active:scale-95"
